@@ -231,6 +231,10 @@ h1, h2, h3, p { margin-top: 0; }
 .contact-form textarea { resize: vertical; }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: #b7a9b1; }
 .form-submit { width: 100%; }
+.form-submit:disabled { opacity: .65; cursor: wait; }
+.contact-form-honeypot { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.form-feedback { min-height: 1.5em; margin: -7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; text-align: center; }
+.form-feedback:empty { display: none; }
 .form-note { margin: -7px 0 0; color: var(--muted); font-size: 11px; line-height: 1.6; text-align: center; }
 
 .not-found { min-height: 62vh; padding: 100px 24px; display: grid; justify-items: center; align-content: center; text-align: center; }
