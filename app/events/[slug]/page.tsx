@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { EventCard } from "@/components/event-card";
+import { EventGallery } from "@/components/event-gallery";
 import { events } from "@/data/events";
 
 type EventPageProps = {
@@ -39,14 +40,7 @@ export default async function EventPage({ params }: EventPageProps) {
         <h1>{event.title}</h1>
         <p>{event.description}</p>
       </header>
-      <div className="event-gallery">
-        {event.photos.map((photo, index) => (
-          <div className={`gallery-photo gallery-photo-${index + 1}`} key={photo}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={photo} alt={`${event.title} — תמונה ${index + 1}`} />
-          </div>
-        ))}
-      </div>
+      <EventGallery title={event.title} photos={event.photos} />
       <section className="event-page-cta">
         <div>
           <span className="eyebrow">האירוע שלכם מחכה</span>
