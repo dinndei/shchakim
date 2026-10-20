@@ -163,6 +163,23 @@ h1, h2, h3, p { margin-top: 0; }
 .event-card h3 { margin: 4px 0 0; font-size: 19px; font-weight: 500; }
 .event-location { color: var(--muted); font-size: 12px; }
 
+.testimonials-section { padding: 88px 0 92px; background: var(--cream); }
+.testimonials-inner { width: min(1320px, calc(100% - 96px)); margin: 0 auto; }
+.testimonials-heading { margin-bottom: 32px; }
+.testimonials-heading h2 { margin: 12px 0 0; font-size: clamp(33px, 4vw, 48px); font-weight: 500; line-height: 1.2; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.testimonial-card { display: flex; min-height: 220px; flex-direction: column; justify-content: space-between; padding: 26px; border: 1px solid var(--line); border-radius: 4px; background: var(--paper); }
+.testimonial-card blockquote { margin: 0; color: var(--ink); font-family: var(--serif); font-size: 21px; font-style: italic; line-height: 1.65; }
+.testimonial-attribution { display: flex; flex-direction: column; gap: 4px; padding-top: 25px; font-size: 13px; }
+.testimonial-attribution strong { font-weight: 600; }
+.testimonial-attribution span, .testimonials-count { color: var(--muted); font-size: 12px; }
+.testimonials-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; }
+.testimonials-buttons { display: flex; gap: 8px; }
+.testimonial-control { display: grid; width: 42px; height: 42px; place-items: center; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); color: var(--ink); cursor: pointer; }
+.testimonial-control:hover { border-color: var(--accent); color: var(--accent); }
+.testimonial-control:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.testimonial-autoplay { font-size: 13px; }
+
 .home-contact {
   position: relative;
   overflow: hidden;
@@ -241,7 +258,7 @@ h1, h2, h3, p { margin-top: 0; }
 .not-found h1 { font-size: clamp(48px, 6vw, 75px); }
 
 @media (max-width: 900px) {
-  .header-inner, .footer-inner, .footer-bottom, .events-section, .event-page-top, .event-page-heading, .event-gallery, .event-page-cta, .related-events, .contact-page { width: min(100% - 48px, 720px); }
+  .header-inner, .footer-inner, .footer-bottom, .events-section, .testimonials-inner, .event-page-top, .event-page-heading, .event-gallery, .event-page-cta, .related-events, .contact-page { width: min(100% - 48px, 720px); }
   .hero { min-height: auto; padding: 72px 24px 90px; grid-template-columns: 1fr 1fr; gap: 5%; }
   .hero h1 { font-size: clamp(46px, 7vw, 65px); }
   .hero-art { height: 370px; }
@@ -255,7 +272,7 @@ h1, h2, h3, p { margin-top: 0; }
   .contact-form-section { padding: 30px 24px; }
 }
 @media (max-width: 640px) {
-  .header-inner, .footer-inner, .footer-bottom, .events-section, .event-page-top, .event-page-heading, .event-gallery, .event-page-cta, .related-events, .contact-page { width: calc(100% - 40px); }
+  .header-inner, .footer-inner, .footer-bottom, .events-section, .testimonials-inner, .event-page-top, .event-page-heading, .event-gallery, .event-page-cta, .related-events, .contact-page { width: calc(100% - 40px); }
   .header-inner { height: 72px; }
   .brand-logo { width: 88px; }
   .footer-brand .brand-logo { width: 112px; }
@@ -275,6 +292,13 @@ h1, h2, h3, p { margin-top: 0; }
   .event-image-wrap, .event-card-1 .event-image-wrap, .event-card-2 .event-image-wrap, .event-card-4 .event-image-wrap, .event-card-5 .event-image-wrap { height: min(100vw, 390px); }
   .event-arrow { opacity: 1; transform: none; }
   .event-card h3 { font-size: 18px; }
+  .testimonials-section { padding: 70px 0; }
+  .testimonials-heading { margin-bottom: 24px; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .testimonial-card:not(:first-child) { display: none; }
+  .testimonial-card { min-height: 200px; padding: 23px; }
+  .testimonial-card blockquote { font-size: 19px; }
+  .testimonials-controls { margin-top: 18px; }
   .home-contact { padding: 75px 20px 82px; }
   .home-contact h2 { font-size: 56px; }
   .contact-decoration { left: -4%; bottom: -75px; font-size: 280px; }

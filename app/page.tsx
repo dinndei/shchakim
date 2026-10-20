@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { EventCard } from "@/components/event-card";
+import { TestimonialsCarousel } from "@/components/testimonials-carousel";
 import { events } from "@/data/events";
 
 export default function HomePage() {
@@ -40,6 +41,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <TestimonialsCarousel />
 
       <section className="home-contact">
         <span className="eyebrow"><span className="eyebrow-dot" /> הדבר הבא מתחיל כאן</span>
